@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="logo" height="50">
+        </header>
+        <h1>CASOS PRACTICOS DE CONDICIONALES ANIDADAS</h1>
+        <div id="caso">
+            <img src="img/caso3.png" alt="caso1" height="400">
+        </div>
+        <div id="solucion">
+            <script>
+                var tipo_enf,costo_dia,nro_dia,edad,costo_adicional,costo_total,costo_ini;
+
+                tipo_enf=parseInt(prompt("Ingrese el tipo de emfermedad [1,2,3,4...]"));
+                edad=parseInt(prompt("Ingrese su edad"));
+                nro_dia=parseInt(prompt("Ingrese los dias de hospitalizacíon"));
+
+              
+
+                if (tipo_enf==1) {
+                    costo_dia=25;
+                } else {
+                    if (tipo_enf==2) {
+                        costo_dia=16;
+                    } else {
+                        if (tipo_enf==3) {
+                            costo_dia=20;
+                        } else {
+                            if (tipo_enf==4) {
+                                costo_dia=32;
+                            } else {
+                                costo_dia=20;
+                            }
+                        }
+                    }
+                }
+
+                costo_ini = costo_dia * nro_dia;
+
+                if (edad>=14 && edad<=22) {
+                    costo_adicional=costo_ini*0.10;
+                } else {
+                    costo_adicional=0;
+                } 
+
+                costo_total = costo_ini + costo_adicional;
+
+
+                document.write("========== Cotizacion ==========","<br>");
+                document.write("Tipo de emfermedad: ",tipo_enf,"<br>");
+                document.write("Dias en el hospital: ",nro_dia,"<br>");
+                document.write("Costo Inicial: ",costo_ini,"<br>")
+                document.write("Costo por dia: ",costo_dia,"<br>");
+                document.write("Costo adcicional: ",costo_adicional,"<br>");
+                document.write("Total: ",costo_total,"<br>");
+                document.write("============ Fin ============");
+            </script>
+        </div>      
+    </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="logo" height="50">
+        </header>
+        <h1>CASOS PRACTICOS DE CONDICIONALES ANIDADAS</h1>
+        <div id="caso">
+            <img src="img/caso2.png" alt="caso1" height="170">
+        </div>
+        <div id="solucion">
+            <script>
+                var edad,msj; 
+                
+                edad=parseInt(prompt("Ingrese su edad"));
+
+                if (edad>=3 && edad<10) {
+                    msj="eres un niño";
+                } else {
+                    if (edad>=10 && edad<18) {
+                        msj="eres un jovencito";
+                    } else {
+                        if (edad>=18 && edad<90) {
+                            msj="eres mayor de edad";
+                        } else {
+                            msj="tienes muchos años encima";
+                        }
+                    }
+                }
+                
+                document.write("Su edad es ",edad," por lo que ",msj);
+
+                
+            </script>
+        </div>      
+    </main>
+</body>
+</html>

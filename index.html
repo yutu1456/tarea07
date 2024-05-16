@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="logo" height="50">
+        </header>
+        <h1>CASOS PRACTICOS DE CONDICIONALES ANIDADAS</h1>
+        <div id="caso">
+            <img src="img/caso1.png" alt="caso1" height="170">
+        </div>
+        <div id="solucion">
+            <script>
+                var nota1,nota2,nota3,prom,msj;
+
+                nota1=parseInt(prompt("Ingrese la Nota 1"));
+                nota2=parseInt(prompt("Ingrese la Nota 2"));
+                nota3=parseInt(prompt("Ingrese la Nota 3"));
+
+                prom=(nota1+nota2+nota3)/3;
+
+                if (prom>=7) {
+                    msj="Promocionado";
+                } else {
+                    if (prom>=4) {
+                        msj="Regular";
+                    } else {
+                        msj="Reprobado";
+                    }
+                }
+                document.write("========== Promedio ==========","<br>");
+                document.write("Nota 1: ",nota1,"<br>");
+                document.write("Nota 2: ",nota2,"<br>");
+                document.write("Nota 3: ",nota3,"<br>");
+                document.write("Promedio: ",prom.toFixed(1),"<br>");
+                document.write("El estudiante esta: ",msj,"<br>");
+                document.write("========== Fin ==========");
+            </script>
+        </div>      
+    </main>
+</body>
+</html>
